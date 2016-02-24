@@ -57,6 +57,6 @@ source env/bin/activate
 
 pip install -r requirements.txt
 
-# Running / Development
+# Running
 
 python main.py

@@ -20,7 +20,7 @@
       }
       .affix {
           top: 274px;
-          width: 213px;
+          width: 200px;
       }
       .lightboxcontainer {
         width:100%;
@@ -121,7 +121,7 @@
                 <input type="text" name="trailer" placeholder="Trailer link" style="width: 250px;">
                 <input type="text" name="cast" placeholder="Cast" style="width: 250px;">
                 <div class="form-group">
-                  <div class="col-lg-offset-6 col-lg-10">
+                  <div class="col-sm-offset-6 col-sm-9">
                     <button type="submit" class="btn btn-primary">
                       <i class="fa fa-save">&nbsp Save</i>
                     </button>
@@ -133,27 +133,34 @@
         </div>
 
 
-<div class="container">
   <div class="col-sm-9">
     <h2 class="title text-center">Movie List</h2>
+    <div class="row">
       <div class="features_items"><!--features_items-->
+
         {% for i in result %}
-				  <div class="col-sm-4">
+          <div class="col-sm-4">
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center" id={{ i[0] }}>
-                  <h2>{{ i[0] }}</h2>
-                  <p>{{ i[4] }}</p>
                   <a class="html5lightbox" title={{ i[0] }} href={{ i[3] }}><img height="350" width="50" src={{ i[2] }} alt={{ i[0] }} /></a>
-                  <h5>{{ i[1] }}</h5>
+                  <div class="product-overlay">
+											<div class="overlay-content">
+												<a class="html5lightbox" title={{ i[0] }} href={{ i[3] }}><h2>{{ i[0] }}</h2></a>
+												<a class="html5lightbox" title={{ i[0] }} href={{ i[3] }}><p style="text-align:center"><b>{{ i[4] }}</b></p></a>
+                        <a class="html5lightbox" title={{ i[0] }} href={{ i[3] }}><p style="text-align:justify">{{ i[1] }}</p></a>
+												<a class="html5lightbox btn btn-default" title={{ i[0] }} href={{ i[3] }}><i class="fa fa-glyphicon-film"></i>Watch Trailer</a>
+                        <p>&nbsp</p>
+											</div>
+										</div>
 								</div>
 							</div>
 					  </div>
           </div>
         {% endfor %}
       </div><!--features_items-->
+      </div>
 		</div>
-  </div>
 </div>
 </div><!--/container-->
 

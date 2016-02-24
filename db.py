@@ -42,8 +42,10 @@ class DB():
         conn = _from_open[0]
         c = _from_open[1]
         c.execute('INSERT INTO trailers VALUES (?,?,?,?,?)', (str(data[0]),str(data[1]),str(data[2]),str(data[3]),str(data[4])))
+        syslog.syslog('Data inserted into: ' + str(self.db))
         conn.commit()
         conn.close()
+        syslog.syslog('Connection Closed to: ' + str(self.db))
 
     def mrproper(self,ensurance):
         '''

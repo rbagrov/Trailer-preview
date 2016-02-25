@@ -37,6 +37,10 @@ def index():
 	result = api.get_data()
 	return render_template("index.html", pname=pname, result=result)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html", pname=pname)
+
 if __name__ == "__main__":
 	syslog.syslog('Starting ' + pname + '...')
 	app.run(host='0.0.0.0', port=8111, debug=True)

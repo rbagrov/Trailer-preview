@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Movie Trailer mini website">
+    <meta name="author" content="bagrov.rostislav@gmail.com">
+    <title> {{ pname }} </title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/prettyPhoto.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+	  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+	  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" height="42" width="42" href=http://static.wixstatic.com/ficons/2c2dd4_31386d31a63747cd8da026b2a1f6f696.png>
+
+    <style>
+      body {
+          position: relative;
+      }
+      .affix {
+          top: 274px;
+          width: 200px;
+      }
+      .lightboxcontainer {
+        width:100%;
+        text-align:left;
+      }
+      .lightboxleft {
+        width: 40%;
+        float:left;
+      }
+      .lightboxright {
+        width: 60%;
+        float:left;
+      }
+      .lightboxright iframe {
+        min-height: 390px;
+      }
+      .divtext {
+        margin: 36px;
+      }
+      footer {
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+      }
+      @media (max-width: 800px) {
+      .lightboxleft {
+        width: 100%;
+      }
+      .lightboxright {
+        width: 100%;
+      }
+      .divtext {
+        margin: 12px;
+      }
+    }
+
+      </style>
+</head><!--/head-->
+
+<body>
+  <header id="header"><!--header-->
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="logo pull-left">
+              <a href="{{ url_for('index') }}"><img height="100" width="120" src=http://static.wixstatic.com/ficons/2c2dd4_31386d31a63747cd8da026b2a1f6f696.png alt="" /></a>
+              <h3> {{ pname }} </h3>
+            </div>
+					</div>
+					</div>
+				</div>
+	     </div><!--/header-middle-->
+     </header><!--/header-->
+
+<div class="row">
+  <div class="container">
+    <div class="col-sm-6">
+      <h1> Oops. </h1>
+      <h2> 404: Page not found</h2>
+      <a href="{{ url_for('index') }}"><p>Go back</p></a>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"><!--Footer-->
+  <div class="footer-bottom">
+	  <div class="container">
+			<div class="row">
+				<p class="pull-left">Copyright © 2016 My-First-Project Inc. All rights reserved.</p>
+        <p class="pull-right">Modified by <span><a target="_blank" href="https://bg.linkedin.com/in/rostislav-bagrov-13776460">Rostislav Bagrov</a>
+				<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a>
+			</div>
+		</div>
+  </div>
+</footer><!--/Footer-->
+
+  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/html5lightbox.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.scrollUp.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/price-range.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.prettyPhoto.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

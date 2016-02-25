@@ -45,7 +45,7 @@ pip install virtualenv
 
 cd /usr/local/src/
 
-git clone 
+git clone https://github.com/rbagrov/Trailer-preview.git
 
 cp -r /usr/local/src/Trailer-preview/* /usr/local/src/Movie_Trailer/
 
